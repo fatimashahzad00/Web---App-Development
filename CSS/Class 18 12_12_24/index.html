@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* .grid-container {
+      background-color: #2196f3;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto;
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+    .grid-item2 {
+      grid-column: 2 / span 4;
+    }
+    .grid-item1 {
+      grid-row: 1 / span 4;
+    } */
+
+    :root{
+        --lightblue: #1e90ff;
+        --white: white;
+        --textsize: 28px;
+    }
+
+    body {
+      background-color: var(--lightblue);
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--lightblue);
+      font-size: var(--textsize);
+      font-weight: var(--fontweight, 900);
+    }
+
+    .container {
+      color: var(--lightblue);
+      background-color: var(--white);
+      padding: 15px;
+    }
+
+    button {
+      background-color: var(--white);
+      color: var(--lightblue);
+      border: 1px solid var(--lightblue);
+      padding: 10px 40px;
+      font-size: var(--textsize);
+      font-weight: var(--fontweight);
+    }
+
+    @media screen and (min-width: 600px) {
+        body{
+            background-color: burlywood;
+        }
+
+        .container{
+            color: chocolate;
+        }
+    }
+
+    @media screen and (max-width:480px) {
+        button{
+            padding: 5px;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        h1 {
+            display: none;
+        }
+    }
+  </style>
+  <body>
+    <!-- <div class="grid-container">
+      <div class="grid-item grid-item1">1</div>
+      <div class="grid-item grid-item2">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      
+    </div> -->
+
+    <h1>Using the var() Function</h1>
+
+    <div class="container">
+      <h2>Lorem Ipsum</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper
+        diam at erat pulvinar, at pulvinar felis blandit.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper
+        diam at erat pulvinar, at pulvinar felis blandit.
+      </p>
+      <p class="btn-container">
+        <button>Yes</button>
+        <button>No</button>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Countdown Timer</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1a1a1a;
+            overflow: hidden;
+        }
+        .countdown-container {
+            text-align: center;
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .time-segment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .time {
+            font-size: 4rem;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 100px;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .time::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                #ff00ea, #ff00ea, #00ffff, #00ff00, #ffff00, #ff0000, #ff00ea
+            );
+            animation: rotate 4s linear infinite;
+        }
+        .time::after {
+            content: attr(data-value);
+            position: absolute;
+            inset: 3px;
+            background: #1a1a1a;
+            border-radius: 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 2.5rem;
+        }
+        @keyframes rotate {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+        .label {
+            font-size: 1rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            display: inline-block;
+        }
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #ff00ea, #00ffff, #00ff00, #ffff00, #ff0000);
+            animation: rainbow 5s linear infinite;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-container">
+        <h1>Neon Countdown</h1>
+        <div class="countdown">
+            <div class="time-segment">
+                <div class="time" id="days" data-value="00"></div>
+                <div class="label">Days</div>
+            </div>
+            <div class="time-segment">
+                <div class="time" id="hours" data-value="00"></div>
+                <div class="label">Hours</div>
+            </div>
+            <div class="time-segment">
+                <div class="time" id="minutes" data-value="00"></div>
+                <div class="label">Minutes</div>
+            </div>
+            <div class="time-segment">
+                <div class="time" id="seconds" data-value="00"></div>
+                <div class="label">Seconds</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const now = new Date();
+            const newYear = new Date(now.getFullYear() + 1, 0, 1);
+            const diff = newYear - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').dataset.value = days.toString().padStart(2, '0');
+            document.getElementById('hours').dataset.value = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').dataset.value = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').dataset.value = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
+

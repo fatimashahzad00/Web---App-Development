@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <p>Username:
+            <input type="text" name="Username" size="15" maxlength="10">
+        </p>
+
+
+        <p>Email:
+            <input type="email" name="email" size="15">
+        </p>
+
+        <p>Password:
+            <input type="password" name="password" size="15" maxlength="8">
+        </p>
+        <p>Comments:</p>
+        <textarea name="comments" cols="15" rows="5"></textarea>
+
+        <p>Please select your gender:
+            <br>
+            <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female"> Female
+        </p>
+
+        <!-- <p>Please select your languages:
+            <br>
+            <input type="checkbox" name="lang" value="English" checked> English
+            <input type="checkbox" name="lang" value="Urdu"> Urdu
+            <input type="checkbox" name="lang" value="Arabic"> Arabic
+            <input type="checkbox" name="lang" value="Farsi"> Farsi
+
+        </p> -->
+
+        <select name="gadgets" size="3" multiple="multiple">
+            <option value="select">Select</option>
+            <option value="Mobile" selected>Mobile</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Computer">Computer</option>
+            <option value="Ipad">Ipad</option>
+        </select>
+        <br> <br>
+        <input type="file" name="resume">
+        <br> <br>
+        <input type="hidden" name="Upload" value="Submit">
+        <input type="image" name="submit" value="Submit" src="button.avif" width="70" height="70">
+
+        <button><img src="plus.jpg" alt="add" width="10" height="10" /> Add</button>
+
+    </form>
+</body>
+
+</html>

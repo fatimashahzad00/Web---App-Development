@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .op1, .op2, .op3 {
+        opacity: 0.5; /* 20% opacity*/
+    }
+    .op1:hover {
+        opacity: 1;
+    }
+    .op2:hover {
+        opacity: 1;
+    }
+   
+    .op3:hover {
+      
+        opacity: 1;
+    }
+
+    .op4:hover {
+        opacity: 0.5;
+    }
+    .op5:hover {
+        opacity: 0.5;
+    }
+    .op6:hover {
+        opacity: 0.5;
+    }
+
+    .imgBox {
+        width: 700px;
+        height: 150px;
+        border: 2px solid black;
+        background: url(img_forest.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .text{
+        background-color: white;
+        width: 500px;
+        margin: auto;
+        padding: 30px;
+        border: 2px solid rgb(0, 0, 0);
+        opacity: 0.5;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        margin-top: 25px;
+
+    }
+
+    ul {
+        list-style-type: none;
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
+        width: 300px;
+        height: 160px;
+        background-color: rgb(212, 212, 212);
+        
+    }
+    li {
+        border: 2px solid black;
+        border-top: 0;
+    }
+    li.active {
+        border-top: 2px solid black;
+    }
+    li a {
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
+        margin: auto;
+        text-align: center;
+        color: #000;
+    }
+    li a:hover {
+        background-color: black;
+        color: #fff;
+    }
+    li a.active {
+        background-color: rgb(55, 146, 55);
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(215, 215, 215);
+        min-width: 100px;
+        padding: 12px 16px;
+        left: 2px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+<body>
+    <div class="imgBox">
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, error?</p>
+    </div>
+
+    <ul>
+        <li class="active"><a href="#home" class="active">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <div class="dropdown">
+        <span>Mouse over me</span>
+        <div class="dropdown-content">
+        <p>Hello World!</p>
+        </div>
+      </div>
+
+
+      <!-- <h1>Transperent hover effect</h1>
+    <img src="img_forest.jpg" class="op1"  width="200" height="200">
+    <img src="img_forest.jpg" class="op2"  width="200" height="200">
+    <img src="img_forest.jpg" class="op3"  width="200" height="200">
+    <hr>
+
+    <img src="img_forest.jpg" class="op4"  width="200" height="200">
+    <img src="img_forest.jpg" class="op5"  width="200" height="200">
+    <img src="img_forest.jpg" class="op6"  width="200" height="200"> -->
+
+</body>
+</html>

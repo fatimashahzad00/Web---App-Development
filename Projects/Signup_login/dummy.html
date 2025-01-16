@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Landing Page</title>
+  <style>
+    body {
+      background-image: url(iphone-15-pro.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 3000px;
+      background-position-y: -10px;
+      background-color: #000000;
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-family: 'Roboto', sans-serif;
+      color: #1D1D1F;
+    }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.75rem;
+      height: 42px;
+      font-size: 12px;
+      opacity: 0.9;
+      background-color: #ddd;
+      z-index: 100;
+      position: sticky;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      margin-top: 3px;
+    }
+
+    .navbar ul a {
+      padding: 1.1rem;
+      text-decoration: none;
+      color: #313131;
+    }
+
+    .navbar ul a:hover {
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    li a:hover {
+      color: rgba(6, 82, 182, 0.918);
+    }
+
+    .apple-logo-icon img,
+    .search-icon img,
+    .cart-icon img {
+      width: 20px;
+      transition: transform 0.3s, opacity 0.3s ease;
+    }
+
+    .apple-logo-icon img:hover,
+    .search-icon img:hover,
+    .cart-icon img:hover {
+      transform: scale(0.9);
+      opacity: 0.6;
+      color: rgb(80, 76, 76);
+    }
+
+    .search-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+
+    .search-bar {
+      width: 0;
+      opacity: 0;
+      padding: 5px;
+      font-size: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .search-container:focus-within .search-bar {
+      width: 200px;
+      opacity: 1;
+    }
+
+    .search-icon {
+      cursor: pointer;
+    }
+
+    .product-heading {
+      font-size: 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .product-heading h4 {
+      color: white;
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .product-heading h3 {
+      font-size: 70px;
+      color: #ffffff;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .product-heading h2 {
+      font-size: 25px;
+      color: rgb(151, 147, 147);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .product-heading h5 {
+      font-size: 15px;
+      color: rgb(151, 147, 147);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .product-heading button {
+      padding: 10px 20px;
+      background-color: transparent;
+      color: rgb(74, 176, 226);
+      border: none;
+      border-radius: 5px;
+      font-weight: light;
+      font-family: Arial, Helvetica, sans-serif;
+      transition: transform 0.3s, background-color 0.3s ease, color;
+      cursor: pointer;
+      outline: none;
+      box-shadow: none;
+      font-size: 25px;
+    }
+
+    .product-heading button:hover {
+      transform: scale(0.9);
+      color: white;
+      text-decoration: underline;
+    }
+
+    #learn-more {
+      text-decoration: none;
+      color: #4398dd;
+      font-size: 14px;
+      font-weight: lighter;
+      font-size: 25px;
+      font-family: sans-serif;
+      cursor: pointer;
+    }
+
+    #learn-more:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <ul>
+        <li class="apple-logo-icon">
+          <a href="#"><img src="apple-logo (1).png" alt="apple-logo"></a>
+        </li>
+        <li><a href="#">Store</a></li>
+        <li><a href="#">Mac</a></li>
+        <li><a href="#">iPad</a></li>
+        <li><a href="#">iPhone</a></li>
+        <li><a href="#">Watch</a></li>
+        <li><a href="#">AirPods</a></li>
+        <li><a href="#">Vision</a></li>
+        <li><a href="#">TV & Home</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Support</a></li>
+        <li class="search-container">
+          <label class="search-icon" for="search-bar"><img src="search-interface-symbol-removebg-preview.png" alt="search-icon"></label>
+          <input type="text" id="search-bar" class="search-bar" placeholder="Search here...">
+        </li>
+        <li class="cart-icon">
+          <a href="#"><img src="market-removebg-preview.png" alt="bag-icon"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <br><br>
+  <section class="product-heading">
+    <h4>NEW</h4>
+    <h3>IPHONE 15 PRO</h3>
+    <br>
+    <h2>Titanium. So strong. So light. So Pro.</h2>
+    <br>
+    <h5>From $41.62/mo. for 24 mo. or $999.00 before trade-in</h5>
+    <br>
+    <button>Buy</button>
+    <a href="#" id="learn-more">Learn More ></a>
+  </section>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+    .marg{
+        color: brown;
+        border: 2px solid chartreuse;
+        margin: 20px auto;
+        width: 200px;
+        padding: 10px;
+        height: 100px;
+    }
+    
+    .inherit{
+        border: 2px solid red;
+        margin: 40px;
+    }
+    
+    .inherit h1{
+        border: 2px solid magenta;
+        margin: inherit;
+        padding: 10px 15px;
+    }
+</style>
+<body>
+    <h1 class="marg">Hello World</h1>
+
+    <div class="inherit">
+        <h1>Hello world</h1>
+    </div>
+   
+</body>
+</html>

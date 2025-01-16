@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* a.highlight:hover{
+        color: rgb(245, 137, 13);
+    } */
+    /* div {
+        width: 100px;
+        height: 100px;
+        border: 2px solid brown;
+    }
+    div:hover {
+        background-color: burlywood;
+    } */
+
+    /* div p{
+        display: none;
+        background-color: yellow;
+        padding: 20px;
+    }
+
+    div:hover p {
+        display: block;
+    }
+
+
+    div p:first-child {
+        font-size: 40px;
+    }
+
+    q:lang(no){
+        quotes: "~" "~";
+    }
+
+    div p:last-child{
+        font-weight: bold;
+    } */
+    p::first-line {
+      font-size: 18px;
+      font-weight: 600;
+      color: saddlebrown;
+      font-variant: small-caps;
+    }
+    p.para1::first-letter {
+      font-size: 34px;
+      color: blue;
+    }
+    p::before {
+      content: url("images.png");
+      margin: 10px;
+    }
+
+    p::after {
+      content: url("images.png");
+      margin: 10px;
+    }
+    ::marker {
+      color: red;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+
+    ::selection {
+      color: red;
+      background: yellow;
+    }
+  </style>
+  <body>
+    <!-- <p><a class="highlight" href="css_syntax.asp">CSS Syntax</a></p>
+    <p><a href="default.asp">CSS Tutorial</a></p> -->
+    <!-- <div>
+        This is my div
+    </div> -->
+
+    <!-- <div>
+        Hover me to show a text
+        <p>Tada I am here!</p>
+        <p>Tada I am here!</p>
+        <p>Tada I am here!</p>
+    </div>
+
+    <p>
+        Lorem ipsum <q lang="no">dolor sit amet </q>consectetur adipisicing elit. Recusandae facere eligendi consequuntur ad, ea voluptatum atque dolores soluta voluptates vitae!
+    </p> -->
+
+    <p class="para1">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro nobis qui
+      natus recusandae animi minus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro nobis qui
+      natus recusandae animi minus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro nobis qui
+      natus recusandae animi minus!
+    </p>
+
+    <ol type="a">
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+    </ol>
+  </body>
+</html>
